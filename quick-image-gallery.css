@@ -1,0 +1,177 @@
+.imagebox-wrap,
+.imagebox-skin,
+.imagebox-outer,
+.imagebox-inner,
+.imagebox-image,
+.imagebox-wrap iframe,
+.imagebox-wrap object,
+.imagebox-nav,
+.imagebox-nav span,
+.imagebox-tmp {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	vertical-align: top;
+}
+.imagebox-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8020;
+}
+.imagebox-skin {
+	position: relative;
+	background: #f9f9f9;
+	color: #444;
+	text-shadow: none;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	border:2px solid #ccc;
+}
+.imagebox-opened {
+	z-index: 8030;
+}
+.imagebox-opened .imagebox-skin {
+	-webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.imagebox-outer, .imagebox-inner {
+	position: relative;
+}
+.imagebox-inner {
+	overflow: hidden;
+}
+.imagebox-type-iframe .imagebox-inner {
+	-webkit-overflow-scrolling: touch;
+}
+.imagebox-error {
+	color: #444;
+	font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin: 0;
+	padding: 15px;
+	white-space: nowrap;
+}
+.imagebox-image, .imagebox-iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.imagebox-image {
+	max-width: 100%;
+	max-height: 100%;
+}
+#imagebox-loading, .imagebox-close, .imagebox-prev span, .imagebox-next span {
+	background-image: url('images/imagebox_sprite.png');
+}
+#imagebox-loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -22px;
+	margin-left: -22px;
+	background-position: 0 -108px;
+	opacity: 0.8;
+	cursor: pointer;
+	z-index: 8060;
+}
+#imagebox-loading div {
+	width: 44px;
+	height: 44px;
+	background: url('images/imagebox_loading.gif') center center no-repeat;
+}
+.imagebox-close {
+	position: absolute;
+	top: -18px;
+	right: -18px;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+	z-index: 8040;
+}
+.imagebox-nav {
+	position: absolute;
+	top: 0;
+	width: 40%;
+	height: 100%;
+	cursor: pointer;
+	text-decoration: none;
+	background: transparent url('images/blank.gif'); /* helps IE */
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	z-index: 8040;
+}
+.imagebox-prev {
+	left: 0;
+}
+.imagebox-next {
+	right: 0;
+}
+.imagebox-nav span {
+	position: absolute;
+	top: 50%;
+	width: 36px;
+	height: 34px;
+	margin-top: -18px;
+	cursor: pointer;
+	z-index: 8040;
+	visibility: hidden;
+}
+.imagebox-prev span {
+	left: 10px;
+	background-position: 0 -36px;
+}
+.imagebox-next span {
+	right: 10px;
+	background-position: 0 -72px;
+}
+.imagebox-nav:hover span {
+	visibility: visible;
+}
+.imagebox-tmp {
+	position: absolute;
+	top: -99999px;
+	left: -99999px;
+	visibility: hidden;
+	max-width: 99999px;
+	max-height: 99999px;
+	overflow: visible !important;
+}
+.imagebox-lock {
+	overflow: hidden;
+}
+.imagebox-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	display: none;
+	z-index: 8010;
+	background: url('imagebox_overlay.png');
+}
+.imagebox-overlay-fixed {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+.imagebox-lock .imagebox-overlay {
+	overflow: auto;
+	overflow-y: scroll;
+}
+.imagebox-title {
+	visibility: hidden;
+	position: relative;
+	text-shadow: none;
+	z-index: 8050;
+}
+.imagebox-opened .imagebox-title {
+	visibility: visible;
+}
+.imagebox-title-inside-wrap {
+	padding-top: 8px;
+	text-align: center;
+}
